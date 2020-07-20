@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Confeciones.png"  >
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/flatly/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css" >
+    <title>Siscomd</title>
+</head>
+<body style="background: rgb(66, 8, 119);overflow: hidden;">
+ <center><br><br>
+    <div class="w-100" style="height: 350px;"> 
+    <img src="img/Confeciones.png" style="width: 300px;height: 200px; ">
+    <h1 class="text-white">Bienvenido</h1><br>
+    <h5 class="text-white"><a href="#" id="reg">Registrate</a>  o <a href="#" id="ins">inicia secion</a> </h5>
+    <style rel="stylesheet">
+        a{
+            color: rgb(206, 207, 209);
+        }
+
+        .color_red{
+            color: rgb(231, 65, 23);
+        }
+
+        .color_w{
+            color: rgb(255, 255, 255);
+        }
+
+        a:hover{
+         text-decoration: underline;
+         color: rgb(231, 65, 23);
+         cursor: pointer;
+        }
+    </style> 
+</div> 
+<div id="inyect"> 
+<form method="POST" id="form-reg"> 
+<div class="w-100 " style="height: 400px;background: black;">
+<div class="p-5  w-50" >
+    <input class="form-control w-100" autocomplete="off" maxlength="20" placeholder="usuario.." id="usuario" name="usuario"><br>
+    <input class="form-control w-100" autocomplete="off" maxlength="20" placeholder="clave.." id="clave" name="clave">
+    <br>
+    <button type="submit" class="btn btn-success w-25">registrate</button>
+    <br>
+    <div id="respuesta"></div>
+</div>
+</form>
+</div>
+</div>
+
+<div  class="adios" id="inyect2"> 
+    <form method="POST" id="form-ins"> 
+    <div class="w-100 " style="height: 400px;background: black;">
+    <div class="p-5  w-50" >
+        <input class="form-control w-100" autocomplete="off" maxlength="20" placeholder="usuario.." id="usuario2" name="usuario2"><br>
+        <input class="form-control w-100" autocomplete="off" maxlength="20" placeholder="clave.." id="clave2" name="clave2">
+        <br>
+        <button type="submit" class="btn btn-success w-25">inicia secion</button>
+        <br>
+        <div id="respuesta2"></div>
+    </div>
+    </form>
+    </div>
+    </div>
+ </center>
+
+
+    </body>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="js/index.js"></script> 
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#reg').addClass('color_red');
+        
+    $('#reg').click(function (e) { 
+        e.preventDefault();
+
+    $('#ins').removeClass('color_red');
+       $('#reg').addClass('color_red');    
+   $('#inyect').removeClass('adios');
+   $('#inyect2').addClass('adios');
+    });
+
+    $('#ins').click(function (e) { 
+        e.preventDefault();
+
+        $('#ins').addClass('color_red');
+       $('#reg').removeClass('color_red');
+        $('#inyect').addClass('adios');
+        $('#inyect2').removeClass('adios');
+    });
+
+    });
+    </script> 
+    </html>

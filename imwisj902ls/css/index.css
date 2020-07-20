@@ -1,0 +1,22 @@
+.adios{
+    display: none;
+}
+
+::-webkit-scrollbar{
+    background:rgb(199, 12, 84) ;
+    width: 7px;
+}
+
+.like2{
+    color: white;
+    transition: 0.3s all;
+}
+
+.like{
+    transition: 0.3s all;
+    transform: scale(1.5);
+    cursor: pointer;
+    color: rgb(204, 13, 77);
+    background: white;
+    border-radius: 100%;
+}
