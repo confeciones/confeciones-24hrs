@@ -6,7 +6,7 @@ $('#li1').click(function (e) {
     $('#like').addClass('like2');
     
     $.ajax({
-      url: "js/php/inicio.php",
+      url: "/js/php/inicio.php",
       type: "GET",
       success: function (servidor) {
         console.log(servidor);
@@ -87,7 +87,7 @@ $('#li2').click(function (e) {
     e.preventDefault();
 
     $.ajax({
-      url: "js/php/datos.php",
+      url: "/js/php/datos.php",
       type: "GET",
       success: function (servidor) {
         console.log(servidor);
@@ -212,7 +212,7 @@ $('#form-reg').submit(function (e) {
     clave: $('#clave').val(),
   }
   
-$.post("js/php/index.php", datos, function (servidor) {
+$.post("/js/php/index.php", datos, function (servidor) {
     console.log(servidor);
     if(servidor === 'bienvenido') {
       $('#respuesta').html('registrado con exito!');
@@ -263,7 +263,7 @@ $('#form-ins').submit(function (e) {
 
   console.log(datos);
   
-$.post("js/php/secion.php", datos, function (servidor) {
+$.post("/js/php/secion.php", datos, function (servidor) {
      
     console.log(servidor);
     if(servidor === '1') {
